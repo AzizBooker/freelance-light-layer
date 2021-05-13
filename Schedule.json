@@ -1,0 +1,29 @@
+   { 
+       
+    
+    "Schedule" : [
+        
+        {
+        "time":"2-3pm",
+        "date":"5/8",
+        "station":"KZSU"
+    },
+    {
+        "time":"2-3pm",
+        "date":"5/8",
+        "station":"KZSU"
+    },
+    {
+        "time":"4-5pm",
+        "date":"5/9",
+        "station":"NY"
+    },
+    {
+        "time":"4-8pm",
+        "date":"6/11",
+        "station":"TEST"
+    }
+
+
+]
+   }

@@ -13,6 +13,7 @@
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="./style/style.css">
   <title>Light Layer</title>
 </head>
@@ -32,28 +33,31 @@
         <h3>Broadcasting on KZSU <br> Standfords and Noods <br>Radio</h3>
       </div>
     </div>
-    <div id="title-contanier-2">
 
-      <h3>Broadcasting Now on KZSU</h3>
-      <hr>
-      <table>
-        <tr>
-          <th>5/7</th>
-          <th>2-3pm on KZSU</th>
-        </tr>
+
+    <div id="title-contanier-2">
+      <div id="table-heading">
+        <h3>Broadcasting Now on KZSU</h3>
+        <hr>
+      </div>
+      <table id="table">
+        <!-- Content Dynmacially Added from Script.js-->
       </table>
 
     </div>
 
   </section>
+
   <div class="floatTL">
+
     <svg viewBox="0 0 235.46 379.61">
       <g>
-        <path id="myPath" fill="none" stroke="#fff" stroke-miterlimit="0"
+        <path id="myPath" fill="none" stroke="#fff" stroke-miterlimit="0" class="animated infinite"
           d="M39.01 275V84.94c.28-14.2 4.96-27.96 13.38-39.39l1.91-2.59A68.703 68.703 0 01109.62 15h18.12c21.49 0 41.73 10.05 54.73 27.16a68.75 68.75 0 0113.99 41.55V275" />
 
         <text>
-          <textpath xlink:href="#myPath">
+          <textpath id="myPath-text" href="#myPath" startOffset="0">
+
             Jaco Pastorius - Portrait of Tracy / SWV - Rain / Sharon - Revoal Reaching for Our Star / Tirzah - Holding
             On / Taeko Unuki - Dare no Tame ni / D'Angelo - Betray My Heart / Jason Ayala - Obscura / The Internet -
             Wanna Be / Erykah Badu - Bag Lady (Radio Edit) / Curtis Mayfield - No Thing on Me (Cocaine Song) / Freddie
@@ -61,12 +65,16 @@
             / Wilma Archer - Scarecrow / Princess Nokia - Saggy Denim / King Krule - Biscuit Town / Parquet Courts -
             Human Performance
 
-            <animate attributeName="startOffset" from="-200%" to="100%" begin="0s" dur="300s" repeatCount="indefinite"
-              keyTimes="0;1" calcMode="spline" keySplines="0.1 0.2 .22 1" />
+            <animate attributeName="startOffset" from="-200%" to="100%" begin="0s" dur="500s" repeatCount="indefinite"
+              repeatCount="indefinite" keyTimes="0;1" calcMode="spline" keySplines="0.1 0.2 .22 1" />
             <animate attributeName="fill" dur="90s" values="#006400;#000080;gray" calcMode="paced" />
 
           </textpath>
-
+          <!-- 
+          <animate attributeName="startOffset" from="-200%" to="100%" begin="0s" dur="500s" repeatCount="indefinite"repeatCount="indefinite"
+              keyTimes="0;1" calcMode="spline" keySplines="0.1 0.2 .22 1" />
+            <animate attributeName="fill" dur="90s" values="#006400;#000080;gray" calcMode="paced" />
+            -->
         </text>
 
         <!-- <text x="50%" y="25%" text-anchor="middle" stroke-width="2px" dy=".3em" font="helvetica">
@@ -83,7 +91,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
   integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
   crossorigin="anonymous"></script>
-<script defer src="./script/animate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"
+  integrity="sha512-rKFvwjvE4liWPlFnvH4ZhRDfNZ9FOpdkD/BU5gAIA3VS3vOQrQ5BjKgbO3kxebKhHdHcNUHLqxQYSoxee9UwgA=="
+  crossorigin="anonymous"></script>
+<script src="./script/animate.js"></script>
 <script src="./script/script.js"></script>
+
 
 </html>
