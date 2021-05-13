@@ -14,7 +14,7 @@ pathText.textContent = `Jaco Pastorius - Portrait of Tracy / SWV - Rain / Sharon
     `;
 */
 const table = document.querySelector("#table");
-const data = fetch("../Schedule.json")
+const data = fetch("/Schedule.json")
   .then((response) => {
     return response.json();
   })
