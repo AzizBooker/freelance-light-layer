@@ -7,20 +7,20 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h1{
-    font-size: 5rem;
+    font-size: 3.2rem;
 }
 h2{
-    font-size: 3rem;
+    font-size: 1.8rem;
 }
 h3{
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 h4{
-    font-size: 1.5rem;
+    font-size: .9rem;
 }
 svg{
   min-width: 960px;
-  max-width: 1440px;
+  max-width: 2000px;
   position: absolute;
   left: 0%;
   
@@ -39,7 +39,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  
 }
 .floatTL{
     margin-top: .5rem;

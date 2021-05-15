@@ -61,24 +61,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 1.8rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: .9rem;
 }
 
 svg {
   min-width: 960px;
-  max-width: 1440px;
+  max-width: 2000px;
   position: absolute;
   left: 0%;
 }
@@ -96,36 +96,36 @@ td, th {
   font: size 1.6rem;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
 .floatTL {
   margin-top: .5rem;
 }
 
 #title-contanier {
   position: absolute;
-  top: 30%;
-  left: 35%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  top: 18%;
+  left: 40%;
+  width: 30%;
   text-align: center;
 }
 
 #title-contanier img {
-  width: 20rem;
+  width: 15rem;
   text-align: center;
 }
 
 #title-contanier h1 {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   font-weight: 400;
 }
 
 #title-contanier h3 {
-  padding-top: 1rem;
+  padding-top: .9rem;
+  padding-bottom: 1rem;
 }
 
 #title-contanier-1 {
-  margin-bottom: 1rem;
+  margin-bottom: .8rem;
 }
 /*# sourceMappingURL=style.css.map */

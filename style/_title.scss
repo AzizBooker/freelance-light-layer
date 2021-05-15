@@ -1,23 +1,27 @@
 #title-contanier{
 
     position: absolute;
-    top: 30%;
-    left: 35%;
+    transform-origin: center;
+    top: 18%;
+    left: 40%;
+    width: 30%;
+    
     text-align: center;
     img{
-        width: 20rem;
+        width: 15rem;
         text-align: center;
     }
     h1{
-        padding-top: 2rem;
+        padding-top: 1.5rem;
         font-weight: 400;
         
     }
     h3 {
-        padding-top: 1rem;
+        padding-top: .9rem;
+        padding-bottom: 1rem;
     }
     &-1{
-        margin-bottom: 1rem;
+        margin-bottom: .8rem;
     }
     &-2{
         
