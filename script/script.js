@@ -13,10 +13,60 @@ pathText.textContent = `Jaco Pastorius - Portrait of Tracy / SWV - Rain / Sharon
     
     `;
 */
+
+const json_data={ 
+       
+    
+  "Schedule" : [
+      
+      {
+      "time":"2-3pm",
+      "date":"5/8",
+      "station":"KZSU"
+  },
+  {
+      "time":"2-3pm",
+      "date":"5/8",
+      "station":"KZSU"
+  },
+  {
+      "time":"4-5pm",
+      "date":"5/9",
+      "station":"NY"
+  },
+  {
+      "time":"4-8pm",
+      "date":"6/11",
+      "station":"TEST"
+  }
+
+
+]
+ }
+
+
+
+
 const table = document.querySelector("#table");
 const tableHeading=document.querySelector('#table-heading-text')
 
+const arr=json_data.Schedule
+let html=""
+for (index in json_data.Schedule){
+  const str=`
+  <tr >
+          <th >${arr[index].date}</th>
+          <th>${arr[index].time} ${arr[index].station}</th>
+          
+     </tr>
+  `
+  html=html+str;
+}
 
+console.log(html)
+
+table.innerHTML=html
+/*
 const data = fetch("../Schedule.json")
   .then((response) => {
     return response.json();
@@ -38,3 +88,4 @@ const data = fetch("../Schedule.json")
     table.innerHTML=html.join("")
   });
 
+  */
