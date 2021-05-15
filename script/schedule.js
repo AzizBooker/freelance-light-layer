@@ -21,22 +21,22 @@ const json_data={
       
       {
       "time":"2-3pm",
-      "date":"05/10",
+      "date":"06-10",
       "station":"KZSU"
   },
   {
       "time":"2-3pm",
-      "date":"05/8",
+      "date":"06-08",
       "station":"KZSU"
   },
   {
       "time":"4-5pm",
-      "date":"05/9",
+      "date":"06-9",
       "station":"NY"
   },
   {
       "time":"4-8pm",
-      "date":"06/11",
+      "date":"04-11",
       "station":"TEST"
   }
 
@@ -50,22 +50,64 @@ const json_data={
 const table = document.querySelector("#table");
 const tableHeading=document.querySelector('#table-heading-text')
 //Accesing array of times
-const arr=json_data.Schedule
-console.log(arr)
+var raw_arr=json_data.Schedule
+console.log(raw_arr)
 
 //Filtering out times before the current Date
-const month=moment().get('month')+1
-const day=moment().get('date')
-arr.filter((schedule)=>{
-    const day=moment(schedule.date,"MM DD")
-    console.log(day)
-    if (moment(day).isBefore()){
-        console.log('Before')
-    }
-})
+
+function filterArray(arr){
+    const month=moment().get('month')+1
+    const day=moment().get('date')
+    
+    const filtered_arr=arr.filter((schedule)=>{
+        const day=moment(schedule.date, "MM-DD");
+        
+        return day.isAfter()
+        if (day.isBefore()){
+            console.log('Before')
+        }else if(day.isAfter()){
+            console.log('Is after')
+        }
+    })
+    return filtered_arr
+}
+function sortArray(arr){
+    const filtered_arr=arr.sort((firstSchedule,secondSchedule)=>{
+        const firstMoment=moment(firstSchedule.date)
+        const secondMoment=moment(secondSchedule.date)
+        console.log(firstMoment)
+        console.log(secondMoment)
+        if(moment(firstMoment).isBefore(moment(secondMoment))){
+            return -1
+        }else{
+            return 1
+        }
+    })
+    return filtered_arr
+}
+function replaceArrayDateDash(arr){
+    console.log(arr)
+    arr=arr.forEach(element => {
+        console.log(element.date)
+        
+    });
+    return arr
+}
+
+function treatArray(raw_arr)
+{
+    var arr;
+arr=filterArray(raw_arr)
+
+return arr
+}
+
+const arr=treatArray(raw_arr)
+
+console.log(arr)
 
 let html=""
-for (index in json_data.Schedule){
+for (index in arr){
   const str=`
   <tr >
           <th >${arr[index].date}</th>
@@ -75,7 +117,5 @@ for (index in json_data.Schedule){
   `
   html=html+str;
 }
-
-
 table.innerHTML=html
 
