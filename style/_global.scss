@@ -19,7 +19,6 @@ h4{
     font-size: .9rem;
 }
 svg{
-  min-width: 960px;
   max-width: 2000px;
   position: absolute;
   left: 0%;
@@ -32,10 +31,21 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
+//  border-top: 1px solid #000;
+  border-bottom: 1px solid #ccc;
   text-align: left;
   padding: 8px;
   font: size 1.6rem;
+}
+td:last-child,td:last-child{
+  border-bottom: none;
+}
+tr:first-child{
+  border-top: 3px solid #000;
+  
+}
+th:first-child,td:first-child{
+  border-right: 3px solid #000;
 }
 
 tr:nth-child(even) {

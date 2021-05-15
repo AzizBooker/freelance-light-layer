@@ -77,7 +77,6 @@ h4 {
 }
 
 svg {
-  min-width: 960px;
   max-width: 2000px;
   position: absolute;
   left: 0%;
@@ -90,10 +89,22 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border-bottom: 1px solid #ccc;
   text-align: left;
   padding: 8px;
   font: size 1.6rem;
+}
+
+td:last-child, td:last-child {
+  border-bottom: none;
+}
+
+tr:first-child {
+  border-top: 3px solid #000;
+}
+
+th:first-child, td:first-child {
+  border-right: 3px solid #000;
 }
 
 .floatTL {
@@ -127,5 +138,23 @@ td, th {
 
 #title-contanier-1 {
   margin-bottom: .8rem;
+}
+
+#title-contanier-2 #table-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#title-contanier-2 #table-heading img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: .5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+#title-contanier-2 h3 {
+  text-align: left;
 }
 /*# sourceMappingURL=style.css.map */

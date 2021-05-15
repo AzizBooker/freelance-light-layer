@@ -19,12 +19,26 @@
     h3 {
         padding-top: .9rem;
         padding-bottom: 1rem;
+       
     }
+
     &-1{
         margin-bottom: .8rem;
     }
     &-2{
+        #table-heading{
+            display: flex;
+            img{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                margin-right: .5rem;
+                height: 1rem;
+                width: 1rem;
+            }
+        }
         
-        
+        h3{
+            text-align: left;
+        }
     }
 }
