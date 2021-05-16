@@ -2,9 +2,14 @@
 
     position: absolute;
     transform-origin: center;
+    min-width: 30%;
     top: 18%;
-    left: 40%;
+    left: 35%;
     width: 30%;
+    @include breakpoint-down('small'){
+        width:50%;
+        padding-right: 2rem;
+    }
     
     text-align: center;
     img{

@@ -77,12 +77,6 @@ h4 {
   font-size: .9rem;
 }
 
-svg {
-  max-width: 2000px;
-  position: absolute;
-  left: 0%;
-}
-
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -110,16 +104,50 @@ th:first-child, td:first-child {
 
 .floatTL {
   margin-top: .5rem;
+  height: 500vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+svg {
+  width: 100%;
+  min-height: 100px;
+  min-width: 960px;
+  height: 40%;
+  max-height: 200vh;
+  overflow: auto;
+  display: inline-block;
+}
+
+@media (max-width: 39.9375em) {
+  svg {
+    min-width: 700px;
+    padding-bottom: 50vh;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
 
 #title-contanier {
   position: absolute;
   -webkit-transform-origin: center;
           transform-origin: center;
+  min-width: 30%;
   top: 18%;
-  left: 40%;
+  left: 35%;
   width: 30%;
   text-align: center;
+}
+
+@media (max-width: 39.9375em) {
+  #title-contanier {
+    width: 50%;
+    padding-right: 2rem;
+  }
 }
 
 #title-contanier img {

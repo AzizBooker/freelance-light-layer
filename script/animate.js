@@ -1,6 +1,6 @@
 console.log('Hello')
 
-
+/*
 
 const timeline=gsap.timeline({duration: 1.5})
 
@@ -19,3 +19,4 @@ timeline.from('#logo',{
     
 })
 
+*/

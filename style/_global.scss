@@ -19,13 +19,7 @@ h3{
 h4{
     font-size: .9rem;
 }
-svg{
-  max-width: 2000px;
-  position: absolute;
-  left: 0%;
 
-  
-}
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -55,5 +49,29 @@ tr:nth-child(even) {
 }
 .floatTL{
     margin-top: .5rem;
+    height: 500vh;
+    display: flex;
+    justify-content: center;
+   
 }
        
+svg{
+  //max-width: 2000px;
+ // position: absolute;
+  //left: 0%;
+  width:100%;
+  min-height:100px;
+  min-width: 960px;
+  height:40%;
+  max-height:200vh;
+  overflow:auto;
+  display:inline-block;
+
+   @include breakpoint-down('small'){
+     
+        min-width:700px;
+       padding-bottom: 50vh;
+       padding-right: 1rem;
+       padding-left: 1rem;
+    }
+}
